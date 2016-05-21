@@ -1,5 +1,16 @@
 # ca-1666
 
-Rapid Prototype to show several multiple choice interactions and alerts and more.  
+This Rapid Prototype was created to show several multiple choice interactions and alerts and more.  
 
-Multiple Choice with Awesome Bootstrap Checkbox.
+My Role:
+- UI and UX Design
+- Front-End Developer
+
+Technologies Used:
+- HTML
+- CSS
+- JavaScript
+
+Packages Used:
+- Awesome Bootstrap Checkbox (https://github.com/flatlogic/awesome-bootstrap-checkbox/blob/master/README.md)
+- Bootstrap
