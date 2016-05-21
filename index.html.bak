@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CA-1666 Multiple-Choice:  Prototype of awesome bootstrap checkbox demo</title>
+
+    <!-- bootstrap package -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <!-- bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+    <!-- custom demo css -->
+    <!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet"> -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="build.css"/>
+
+     <link rel="stylesheet" href="theme.css">
+     <script src="ca1666.js"></script>
+</head>
+
+
+<body>
+
+
+
+
+<div class="container demo">
+    <h2>CA-1666:  Multiple-Choice</h2>
+
+    <dl class="dl-horizontal">
+        <dt>Toolkit</dt>
+        <dd>From <a target="_blank" href="https://github.com/okendoken/awesome-bootstrap-checkbox/blob/master/README.md">https://github.com/okendoken/awesome-bootstrap-checkbox/blob/master/README.md </a> 
+            <br>
+                Supports bootstrap brand colors: <code>.checkbox-primary</code>, <code>.checkbox-info</code> etc.
+        </dd>
+    </dl>
+
+ 
+
+
+ <!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#checkboxes" role="tab" data-toggle="tab">Checkboxes</a></li>
+  <li><a href="#radios" role="tab" data-toggle="tab">Radio Buttons</a></li>
+</ul>
+
+<div class="col-md-12">
+
+<!-- Tab panes -->
+<div class="tab-content">
+
+    <div class="tab-pane fade in active" id="checkboxes">
+        <p> 
+            <div class="btn-group">
+                <button type="button" id="submit-success" class="btn btn-info"/>submit success</button>
+                <button type="button" id="submit-error" class="btn btn-danger"/>submission error</button>
+                <button type="button" id="submit-warning" class="btn btn-warning"/>submission warning</button>
+                <button type="button" id="submit-feedback" class="btn btn-success"/>submission item feedback</button>
+                
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Notes
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#" class="hide-notes">Hide Notes</a></li>
+                      <li><a href="#" class="summary-feedback">Show Summary Feedback</a></li>
+                      <li><a href="#" class="teacher-notes">Show Teacher Notes</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Choice Labels
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#" class="hide-labels">Hide Labels</a></li>
+                      <li><a href="#" class="show-labels">Show Labels</a></li>
+                    </ul>
+                </div>
+
+            </div><!--btn-group-->
+        </p>
+        <div class="panel panel-default col-md-6">
+            <div class="panel-body">
+                <legend>Checkboxes Demo</legend>
+                <p>Cowboys
+
+                by Terry Cutler
+                About 150 years ago, many young boys and men—and some women—lived a rough, hard life as cowboys in the western United States. Every day they rode bucking broncos, herded cattle, sheep, or goats, roped calves, and took care of, or “doctored,” sick animals.
+                Many people think this type of life died out years ago. It’s true that big cities have grown up in the West. Cars and trucks have replaced horses for transportation. Modern medicines have eliminated many livestock diseases.
+                The cowboy survived these changes. Today there are cowboys on ranches from Texas to Montana. Their lives aren’t much different from those of the cowboys you’ve seen on TV or read about in books.
+                A modern cowboy’s day starts before dawn. He dresses for work just as they did in the Old West: boots with spurs, heavy jeans, and chaps.* Then he puts on a heavy work shirt, a silk or cotton neckerchief, and to top it off, a wide-brimmed hat. Each of these items has a purpose, as it did way back in history.
+                After dressing, a cowboy catches and brushes his favorite horse. He must also check the horse’s feet. Horses need shoes, just as you do, to protect their feet from sharp rocks and thorns. A person who puts shoes on horses for a living is called a farrier, but a real cowboy can do this himself.
+                As the sun rises, the cowboy saddles his horse, mounts up, and heads into the morning sun across wide pastures. Depending on the time of year, he can expect many things during his day.
+
+                * leather leggings worn over trousers for protection
+                www.funforkidzmagazines.com/boysquest
+
+                </p>
+                <p><i>After dressing, a cowboy catches and brushes his favorite horse. He must also check the horse’s feet. Horses need shoes, just as you do, to protect their feet from sharp rocks and thorns. A person who puts shoes on horses for a living is called a farrier, but a real cowboy can do this himself.</i></p>
+                <p>According to the excerpt above, who knows how to put shoes on horses?</p>
+                <!-- submission alerts -->
+                <div id="alert-info" class="alert alert-info fade in" style="display:none;" role="alert">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <strong>Your submission was successful.</strong>
+                </div>
+
+               <div id="alert-danger" class="alert alert-danger fade in" style="display:none;" role="alert">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+
+                    <strong>Submission error.  </strong>Your answers were not submitted.  Please try again.
+                </div>
+
+                <div id="alert-warning" class="alert alert-warning fade in" style="display:none;" role="alert">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+
+                    <strong>Oops!  </strong>Looks like you forgot to provide an answer or two.  Please select your answer(s) and try again.
+                </div>
+                <!-- end of alerts -->
+
+                <div class="col-md-12">
+                <form role="form" name="alert-error">
+                    <div class="checkbox" id="div-checkboxA">
+                        <input id="checkboxA" type="checkbox">
+                        <label for="checkboxA">
+                            <div class="choiceLabel">A.</div><div class="choiceText">Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+                        </label>
+                        <!-- teacher notes -->
+                        <button type="button" class="btn btn-default teacherNotes" data-container="body" data-toggle="popover" data-placement="left" title="Teacher Notes" data-content="Powder sugar plum macaroon pastry tiramisu macaroon pie. Applicake chocolate bar fruitcake soufflé. Sweet chocolate muffin gummi bears danish icing donut candy."><i class="fa fa-paperclip"></i></button>
+                        <!-- //teacher notes -->
+                    </div>
+
+                   
+
+                    <!-- alert -->
+                    <div id="alert-info" class="alert alert-info alert-item-info fade in" style="display:none;" role="alert">
+                        <strong>Partially Correct.</strong>  Gumbo beet greens are green like celery but they aren’t yellow like potato scallions.
+                    </div>
+
+                    <div class="checkbox">
+                        <input id="checkboxB" type="checkbox">
+                        <label for="checkboxB">
+                            <div class="choiceLabel">B.</div><div class="choiceText">Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale.</div>
+                        </label>
+                    </div>
+                    <div id="alert-info" class="alert alert-warning alert-item-info fade in" style="display:none;" role="alert">
+                        <strong>Incorrect.</strong>  Turnip greens are not part of the celery potato family.
+                    </div>
+                    <!-- //alert -->
+
+                    <div class="checkbox">
+                        <input id="checkboxC" type="checkbox">
+                        <label for="checkboxC">
+                            <div class="choiceLabel">C.</div><div class="choiceText">Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress.</div>
+                        </label>
+
+                        <!-- teacher notes -->
+                        <button type="button" class="btn btn-default teacherNotes" data-container="body" data-toggle="popover" data-placement="left" title="Teacher Notes" data-content="Powder sugar plum macaroon pastry tiramisu macaroon pie. Applicake chocolate bar fruitcake soufflé. Sweet chocolate muffin gummi bears danish icing donut candy."><i class="fa fa-paperclip"></i></button>
+                        <!-- //teacher notes -->
+                    </div>
+
+                    <!-- alert -->
+                    <div id="alert-info" class="alert alert-success alert-item-info fade in" style="display:none;" role="alert">
+                        <strong>Correct!</strong> Celery potato scallions are green and yellow veggies.
+                    </div>
+                    <div class="checkbox">
+                        <input id="checkboxD" type="checkbox">
+                        <label for="checkboxD">
+                            <div class="choiceLabel">D.</div><div class="choiceText">Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</div>
+                        </label>
+                    </div>
+                    <!-- //alert -->
+
+
+                    <!-- Summary Feedback:  Learn More -->
+                    <div class="summaryFeedbackPanel fade in">
+                        <div class="row">
+                            <div class="panel-group" id="accordion">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                      Learn More<i class="learnMoreIcon fa fa-lightbulb-o pull-right"></i>
+                                    </a>
+                                  </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                  <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div><!-- row -->
+                    </div><!-- summaryFeedbackPanel -->
+
+
+
+                    <div class="row">
+                        <input type="submit" class="btn btn-primary" value="submit">
+                        <button id="submit-reset" class="btn btn-default">reset</button>
+                    </div>
+                </form><!-- alert-error -->
+                </div><!--col-md-12-->
+            </div><!-- panel-body -->
+        </div><!--panel-->
+<!--- ****************************************************** -->
+    </div><!-- tab-pane -->
+
+
+
+
+
+
+
+
+
+    <div class="tab-pane fade" id="radios">
+        <p> 
+            <div class="btn-group">
+            <button type="button" id="submit-success-radios" class="btn btn-info"/>submit success</button>
+            <button type="button" id="submit-error-radios" class="btn btn-danger"/>submission error</button>
+            <button type="button" id="submit-warning-radios" class="btn btn-warning"/>submission warning</button>
+            <button type="button" id="submit-feedback-radios" class="btn btn-success"/>item feedback</button>
+            
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  Notes
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#" class="hide-notes">Hide Notes</a></li>
+                  <li><a href="#" class="summary-feedback">Show Summary Feedback</a></li>
+                  <li><a href="#" class="teacher-notes">Show Teacher Notes</a></li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  Choice Labels
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#" class="hide-labels">Hide Labels</a></li>
+                  <li><a href="#" class="show-labels">Show Labels</a></li>
+                </ul>
+            </div>
+
+            </div><!--btn-group-->
+
+        </p>
+        <div class="panel panel-default col-md-6">
+            <div class="panel-body">
+                <legend>Radio Button Demo</legend>
+                <p>Jill is counting bundles of pennies. Each bundle has 100 pennies and she has 8 bundles.</p>
+                <p><img src="images/pennies.png"></p>
+                <p>Which shows the best way to count all of the pennies?</p>
+                <!-- submission alerts -->
+                <div id="alert-info-radios" class="alert alert-info fade in" style="display:none;" role="alert">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <strong>Your submission was successful.</strong>
+                </div>
+
+               <div id="alert-danger-radios" class="alert alert-danger fade in" style="display:none;" role="alert">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+
+                    <strong>Submission error.  </strong>Your answer was not submitted.  Please try again.
+                </div>
+
+                <div id="alert-warning-radios" class="alert alert-warning fade in" style="display:none;" role="alert">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+
+                    <strong>Oops!  </strong>Looks like you forgot to provide your answer.  Please select your answer and try again.
+                </div>
+                <!-- end of alerts -->
+
+                <div class="col-md-12">
+                <form role="form" name="alert-error">
+                    <div class="radio">
+                        <input id="radioA" name="radios" type="radio">
+                        <label for="radioA">
+                            <div class="choiceLabel">A.</div><div class="choiceText">00, 2, 200, 4, 400, 6, 600, 8, 800, 9, 900</div>
+                        </label>
+
+                        <!-- teacher notes -->
+                        <button type="button" class="btn btn-default teacherNotes" data-container="body" data-toggle="popover" data-placement="left" title="Teacher Notes" data-content="Powder sugar plum macaroon pastry tiramisu macaroon pie. Applicake chocolate bar fruitcake soufflé. Sweet chocolate muffin gummi bears danish icing donut candy."><i class="fa fa-paperclip"></i></button>
+                        <!-- //teacher notes -->
+
+                    </div>
+
+                    <!-- alert -->
+                    <div id="alert-info" class="alert alert-info alert-item-info-radios fade in" style="display:none;" role="alert">
+                        <strong>Partially Correct.</strong>  Gumbo beet greens are green like celery but they aren’t yellow like potato scallions.
+                    </div>
+                    <!-- //alert -->
+
+                    <div class="radio">
+                        <input id="radioB" name="radios" type="radio">
+                        <label for="radioB">
+                            <div class="choiceLabel">B.</div><div class="choiceText">100, 200, 300, 400, 500, 600, 700, 800</div>
+                        </label>
+
+                        <!-- teacher notes -->
+                        <button type="button" class="btn btn-default teacherNotes" data-container="body" data-toggle="popover" data-placement="left" title="Teacher Notes" data-content="Powder sugar plum macaroon pastry tiramisu macaroon pie. Applicake chocolate bar fruitcake soufflé. Sweet chocolate muffin gummi bears danish icing donut candy."><i class="fa fa-paperclip"></i></button>
+                        <!-- //teacher notes -->
+                    </div>
+
+                    <div class="radio">
+                        <input id="radioC" name="radios" type="radio">
+                        <label for="radioC">
+                            <div class="choiceLabel">C.</div><div class="choiceText">10, 20, 40, 80, 160, 320, 640, 1280</div>
+                        </label>
+
+                        <!-- teacher notes -->
+                        <button type="button" class="btn btn-default teacherNotes" data-container="body" data-toggle="popover" data-placement="left" title="Teacher Notes" data-content="Powder sugar plum macaroon pastry tiramisu macaroon pie. Applicake chocolate bar fruitcake soufflé. Sweet chocolate muffin gummi bears danish icing donut candy."><i class="fa fa-paperclip"></i></button>
+                        <!-- //teacher notes -->
+                    </div>
+
+
+                    <!-- alert -->
+                    <div id="alert-info" class="alert alert-success alert-item-info-radios fade in" style="display:none;" role="alert">
+                        <strong>Correct!</strong> Celery potato scallions are green and yellow veggies.
+                    </div>
+                    <!-- //alert -->
+                    <div class="radio">
+                        <input id="radioD" name="radios" type="radio">
+                        <label for="radioD">
+                            <div class="choiceLabel">D.</div><div class="choiceText">100, 100, 100, 100, 100, 100, 100, 100</div>
+                        </label>
+                    </div>
+
+
+                    <!-- Summary Feedback:  Learn More -->
+                    <div class="summaryFeedbackPanel fade in">
+                        <div class="row">
+                            <div class="panel-group" id="accordion2">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                      Learn More<i class="learnMoreIcon fa fa-lightbulb-o pull-right"></i>
+                                    </a>
+                                  </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in">
+                                  <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div><!-- row -->
+                    </div><!-- summaryFeedbackPanel -->
+
+
+                    
+                    <div class="row">
+                        <input type="submit" class="btn btn-primary" value="submit">
+                        <button id="submit-reset-radios" class="btn btn-default">reset</button>
+                    </div><!-- row -->
+                </form><!-- alert-error -->
+                </div><!--col-md-12-->
+            </div><!-- panel-body -->
+        </div><!--panel-->
+
+    </div><!-- tab pane-->
+
+
+
+
+</div><!--tab-content-->
+
+
+
+
+</div><!--col-md-6-->
+
+
+
+
+
+
+</div><!-- container -->
+</body>
+</html>

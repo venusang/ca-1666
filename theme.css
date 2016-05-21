@@ -1,0 +1,104 @@
+.choiceLabel {
+	font-weight:bold;
+	float:left;
+	width:5%;
+}
+.choiceText{
+	width:90%;
+	float:left;
+}
+.choiceTextNumbers{
+	width: 100px;
+	text-align:right;
+}
+.choiceTextNumbersShort{
+	width: 50px;
+	text-align:right;
+}
+.choiceLabel, .choiceText{
+	display:inline-block;
+}
+
+.demo .dl-horizontal dt{
+	/*width: 20px;*/
+}
+.demo .dl-horizontal dd{
+	/*margin-left:30px;*/
+}
+
+.demo .btn-outline {
+	color: #333;
+	background-color: transparent;
+	border-color: #333;
+}
+
+.demo .btn-outline:hover {
+	color: #fff;
+	background-color: #333;
+	border-color: #ccc;
+}
+
+.learnMoreIcon{
+	font-size:30px;
+	margin-top:-5px;
+}
+
+.checkbox,.radios{
+	position:relative;
+
+}
+
+.checkbox, .radio{
+	min-height: 30px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.radio-selected .teacherNotes{
+	top:-20px;
+	right:3px;
+}
+.teacherNotes{
+	border:none;
+	background:transparent;
+	font-size:30px;
+	color:#979797;
+	position:absolute;
+	right:-30px;
+	top:-10px;
+}
+
+.teacherNotes:hover,.teacherNotes:active,.teacherNotes:focus{
+	color:#000;
+	background:transparent;
+	outline: none;
+}
+
+.summaryFeedbackPanel, .teacherNotes{
+	display: none;
+}
+
+footer{
+	font-size:10px;
+	border-top:1px solid #333;
+	display:inline-block;
+}
+
+.nav-tabs{
+	margin:0 0 20px 0;
+}
+
+.alert{
+	margin-top: 10px;
+}
+
+.radio-wrapper:focus,.radio-selected, .checkbox-wrapper:focus,.checkbox-selected{
+	border:1px solid #ddd;
+	background:#f5f5f5;
+	margin:0 -20px 20px -23px;
+	padding-left: 22px;
+}
+
+.radio-selected .alert,.checkbox-selected .alert{
+	width:95%;
+}

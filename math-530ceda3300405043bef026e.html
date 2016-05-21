@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CA-1666 Multiple-Choice:  Prototype of awesome bootstrap checkbox demo</title>
+
+    <!-- bootstrap package -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <!-- bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="build.css"/>
+
+     <link rel="stylesheet" href="theme.css">
+     <script src="demo.js"></script>
+     <script src="demo-math.js"></script>
+</head>
+
+
+<body>
+
+<div class="container demo">
+    <h2>CA-1666:  Multiple-Choice</h2>
+
+    <dl class="dl-horizontal">
+        <dt>Item ID:</dt>
+        <dd><a target="_blank" href="http://www.corespring.org/player/item/530ceda3300405043bef026e:0/profile">530ceda3300405043bef026e</a></dd>
+    </dl>
+
+<div class="col-md-12">
+<!-- Nav tabs -->
+<div class="col-md-8">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="active"><a href="#btn1" role="tab" data-toggle="tab">Submit Success</a></li>
+      <li><a href="#btn2" role="tab" data-toggle="tab">Submission Error</a></li>
+      <li><a href="#btn3" role="tab" data-toggle="tab">Submission Warning</a></li>
+      <li><a href="#btn4" role="tab" data-toggle="tab">Item Feedback</a></li>
+    </ul>
+</div>
+<div class="col-md-4">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Notes
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#" class="hide-notes">Hide Notes</a></li>
+          <li><a href="#" class="summary-feedback">Show Summary Feedback</a></li>
+          <li><a href="#" class="teacher-notes">Show Teacher Notes</a></li>
+        </ul>
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Choice Labels
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#" class="hide-labels">Hide Labels</a></li>
+          <li><a href="#" class="show-labels">Show Labels</a></li>
+        </ul>
+    </div>
+</div>
+
+
+        <div class="panel panel-default col-md-6">
+            <div class="panel-body">
+                <p>
+                What value is NOT in the domain of this function?
+                </p>
+                <p class="text-center">f(x) = <math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mo>-</mo><mn>4</mn><mi>x</mi><mo>-</mo><mn>4</mn></msqrt><mo>+</mo><mn>3</mn></math>
+                </p>
+                
+               <div id="alert-info-radios" class="alert alert-info fade in" style="display:none;" role="alert">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <strong>Your submission was successful.</strong>
+                </div>
+
+               <div id="alert-danger-radios" class="alert alert-danger fade in" style="display:none;" role="alert">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+
+                    <strong>Submission error.  </strong>Your answer was not submitted.  Please try again.
+                </div>
+
+                <div id="alert-warning-radios" class="alert alert-warning fade in" style="display:none;" role="alert">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+
+                    <strong>Oops!  </strong>Looks like you forgot to provide your answer.  Please select your answer and try again.
+                </div>
+                <!-- end of alerts -->
+
+                <div class="col-md-12">
+
+                <form role="form" name="alert-error">
+                    <div class="radio-wrapper">
+                        <div class="radio">
+                            <input id="radioA" name="radios" type="radio">
+                            <label for="radioA">
+                                <div class="choiceLabel">A.</div><div class="choiceTextNumbersShort">&nbsp;&nbsp;&nbsp;&mdash;1</div>
+                            </label>
+
+                            <!-- teacher notes -->
+                            <button type="button" class="btn btn-default teacherNotes" data-container="body" data-toggle="popover" data-placement="left" title="Teacher Notes" data-content="Powder sugar plum macaroon pastry tiramisu macaroon pie. Applicake chocolate bar fruitcake soufflé. Sweet chocolate muffin gummi bears danish icing donut candy."><i class="fa fa-paperclip"></i></button>
+                            <!-- //teacher notes -->
+
+                        <!-- alert -->
+                        <div id="alert-info" class="alert alert-info alert-item-info-radios fade in" style="display:none;" role="alert">
+                            <strong>Partially Correct.</strong>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur placerat nisi, non interdum risus vehicula sit amet. Integer tristique.
+                        </div>
+                        <!-- //alert -->
+                        </div>
+                     </div><!-- //radio-wrapper -->    
+                    
+                    <div class="radio-wrapper">
+                        <div class="radio">
+                            <input id="radioB" name="radios" type="radio">
+                            <label for="radioB">
+                                <div class="choiceLabel">B.</div><div class="choiceTextNumbersShort">&nbsp;&nbsp;&nbsp;1</div>
+                            </label>
+
+                            <!-- teacher notes -->
+                            <button type="button" class="btn btn-default teacherNotes" data-container="body" data-toggle="popover" data-placement="left" title="Teacher Notes" data-content="Powder sugar plum macaroon pastry tiramisu macaroon pie. Applicake chocolate bar fruitcake soufflé. Sweet chocolate muffin gummi bears danish icing donut candy."><i class="fa fa-paperclip"></i></button>
+                            <!-- //teacher notes -->
+                        </div>
+                    </div><!-- //radio-wrapper -->
+                    
+                    <div class="radio-wrapper">
+                        <div class="radio">
+                            <input id="radioC" name="radios" type="radio">
+                            <label for="radioC">
+                                <div class="choiceLabel">C.</div><div class="choiceTextNumbersShort">&nbsp;&nbsp;&nbsp;&mdash;2</div>
+                            </label>
+                            <!-- alert -->
+                            <div id="alert-info" class="alert alert-success alert-item-info-radios fade in" style="display:none;" role="alert">
+                                <strong>Correct!</strong>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur placerat nisi, non interdum risus vehicula sit amet. Integer tristique.
+                            </div>
+                            <!-- //alert -->
+
+                            <!-- teacher notes -->
+                            <button type="button" class="btn btn-default teacherNotes" data-container="body" data-toggle="popover" data-placement="left" title="Teacher Notes" data-content="Powder sugar plum macaroon pastry tiramisu macaroon pie. Applicake chocolate bar fruitcake soufflé. Sweet chocolate muffin gummi bears danish icing donut candy."><i class="fa fa-paperclip"></i></button>
+                            <!-- //teacher notes -->
+                        </div>
+                    </div><!-- //radio-wrapper -->
+                    <div class="radio-wrapper">
+                        <div class="radio">
+                            <input id="radioD" name="radios" type="radio">
+                            <label for="radioD">
+                                <div class="choiceLabel">D.</div><div class="choiceTextNumbersShort">&nbsp;&nbsp;&nbsp;&mdash;3</div>
+                            </label>
+                        </div>
+                    </div><!-- //radio-wrapper -->
+                   
+
+                    <!-- Summary Feedback:  Learn More -->
+                    <div class="summaryFeedbackPanel fade in">
+                        <div class="row">
+                            <div class="panel-group" id="accordion2">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                      Learn More<i class="learnMoreIcon fa fa-lightbulb-o pull-right"></i>
+                                    </a>
+                                  </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in">
+                                  <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div><!-- row -->
+                    </div><!-- summaryFeedbackPanel -->
+
+
+                    
+                    <div class="row">
+                        <!-- tab content -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="btn1">
+                                <!-- submit success -->
+                                <input type="submit" id="submit-success-radios" class="btn btn-primary" value="submit">
+                                 <button class="submit-reset-radios btn btn-default">reset</button>
+                            </div><!--btn 1-->
+
+                            <div class="tab-pane fade in" id="btn2">
+                                <!-- submission error -->
+                                <input type="submit" id="submit-error-radios" class="btn btn-primary" value="submit">
+                                 <button class="submit-reset-radios btn btn-default">reset</button>
+
+                            </div><!--btn 2-->
+
+                            <div class="tab-pane fade in" id="btn3">
+                                <!-- submission warning -->
+                                <input type="submit" id="submit-warning-radios" class="btn btn-primary" value="submit">
+                                 <button class="submit-reset-radios submit-reset-radios btn btn-default">reset</button>
+
+                            </div><!--btn 3-->
+
+                            <div class="tab-pane fade in" id="btn4">
+                                <!-- item feedback -->
+                                <input type="submit" id="submit-feedback-radios" class="btn btn-primary" value="submit">
+                                 <button class="submit-reset-radios btn btn-default">reset</button>
+                            </div><!--btn 4-->
+                        </div><!-- //tab-content-->
+                                        
+                        <!-- <input type="submit" class="btn btn-primary" value="submit"> -->
+                       
+                    </div><!-- row -->
+                </form><!-- alert-error -->
+
+
+                </div><!--col-md-12-->
+            </div><!-- panel-body -->
+        </div><!--panel-->
+<!--- ****************************************************** -->
+
+
+
+
+
+</div><!--col-md-6-->
+
+
+
+</div><!-- container -->
+</body>
+</html>
