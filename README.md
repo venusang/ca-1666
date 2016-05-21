@@ -1,6 +1,8 @@
 # ca-1666
 
-This Rapid Prototype was created to show several multiple choice interactions and alerts and more.  
+This prototype was designed and developed to show live-interaction with Awesome Bootstrap Checkbox and the Boostrap animations and alerts that a user would experience when taking various multiple choice tests.
+
+The content used for this prototype is real content that could be used for student assessments.
 
 My Role:
 - UI and UX Design
